@@ -16,7 +16,8 @@ public class OiMundoServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		// TODO Auto-generated method stub
-		PrintWriter out = resp.getWriter();
+		PrintWriter out = resp.getWriter();//fica na URL
+	
 		out.println("<html>");
 		out.println("<body>");
 		out.println("oi mundo, primeiro servlets ");
@@ -24,6 +25,7 @@ public class OiMundoServlet extends HttpServlet {
 		out.println("</html>");
 		
 		System.out.println("Chamando Servlets");
+		
 	}
 	
 }
