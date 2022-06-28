@@ -1,5 +1,6 @@
 <%
-  String nomeEmpresa = "Alura";
+//scriplet
+  String nomeEmpresa = (String)request.getAttribute("empresa");
   System.out.println(nomeEmpresa);
   String nomeEmpresa2 = "Stefanini";
 %>
@@ -8,7 +9,7 @@
 <body>
 
 <!-- out é disponível automaticamente  -->
-Empresa <% out.println(nomeEmpresa); %> <%= nomeEmpresa2 %>cadastrada com sucesso!
+Empresa <% out.println(nomeEmpresa); %>  cadastrada com sucesso!
 
 </body>
 </html>
