@@ -10,27 +10,23 @@
 <meta charset="UTF-8">
 <title>Java Standard Taglib</title>
 </head>
-<body>
-	Lista de Empresas</br>
-	<ul>
-		<c:forEach items="${empresas}" var ="empresa">
-			<li>${empresa.nome} - <fmt:formatDate value="${empresa.dataAbertura }" pattern ="dd/MM/yyyy"/> </li> 
-		</c:forEach>
-	</ul>
-	
-	
-<%-- 	<ul>
-	
-	<% 	
-		List<Empresa> lista=(List<Empresa>)request.getAttribute("empresa");//${}
-		for (Empresa empresa :lista ) {
-	%>
-		<li><%=empresa.getNome()%></li>
-	<%		
-		}
-	%>	
-	</ul> --%>
-	
-
-</body>
+	<body>
+		Lista de Empresas</br>
+		<ul>
+			<c:forEach items="${empresas}" var ="empresa">
+				<li>${empresa.nome} - <fmt:formatDate value="${empresa.dataAbertura }" pattern ="dd/MM/yyyy"/> </li> 
+			</c:forEach>
+		</ul>
+		<%-- <ul>
+		
+		<% 	
+			List<Empresa> lista=(List<Empresa>)request.getAttribute("empresa");//${}
+			for (Empresa empresa :lista ) {
+		%>
+			<li><%=empresa.getNome()%></li>
+		<%		
+			}
+		%>	
+		</ul> --%>
+	</body>
 </html>
