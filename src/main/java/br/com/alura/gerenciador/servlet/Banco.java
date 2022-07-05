@@ -12,7 +12,7 @@ public class Banco {
 		empresa.setId(chaveSequencial++);
 		empresa.setNome("Alura");
 		Empresa empresa2 = new Empresa();
-		empresa.setId(chaveSequencial++);
+		empresa2.setId(chaveSequencial++);
 		empresa2.setNome("Caelum");
 		lista.add(empresa);
 		lista.add(empresa2);
