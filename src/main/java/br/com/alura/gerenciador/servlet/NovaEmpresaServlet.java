@@ -23,6 +23,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		String paramDataEmpresa = request.getParameter("data"); 
 		
 		Date dataAbertura = null;
+		
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			dataAbertura = sdf.parse(paramDataEmpresa);
@@ -37,9 +38,13 @@ public class NovaEmpresaServlet extends HttpServlet {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-		//Chamar o JSP
-		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
-		request.setAttribute("empresa",empresa.getNome());
-		rd.forward(request, response);	
+		request.setAttribute("empresa", empresa.getNome());
+		
+		response.sendRedirect("listaEmpresas");//Redirecionamento ocorre no lado no cliente.
+		
+//		//Chamar o JSP 
+//		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");Encaminhar uma requisição para ser atendida por outro recurso (forward).
+//		request.setAttribute("empresa",empresa.getNome());
+//		rd.forward(request, response);	
 	}
 }
