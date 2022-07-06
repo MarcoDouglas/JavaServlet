@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 public class OiMundoServlet extends HttpServlet {
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter out = resp.getWriter();//fica na URL
+		PrintWriter out = response.getWriter();//fica na URL
 	
 		out.println("<html>");
 		out.println("<body>");
